@@ -1,0 +1,51 @@
+```xml
+<odoo>
+    <data>
+        <!-- Distribution Integration Form View -->
+        <record id="view_distribution_integration_form" model="ir.ui.view">
+            <field name="name">distribution.integration.form</field>
+            <field name="model">distribution.integration</field>
+            <field name="arch" type="xml">
+                <form string="Distribution Integration">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="email"/>
+                            <field name="report_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Distribution Integration Tree View -->
+        <record id="view_distribution_integration_tree" model="ir.ui.view">
+            <field name="name">distribution.integration.tree</field>
+            <field name="model">distribution.integration</field>
+            <field name="arch" type="xml">
+                <tree string="Distribution Integration">
+                    <field name="name"/>
+                    <field name="email"/>
+                    <field name="report_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Distribution Integration Action -->
+        <record id="action_distribution_integration" model="ir.actions.act_window">
+            <field name="name">Distribution Integration</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">distribution.integration</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create a new Distribution Integration.
+                </p>
+            </field>
+        </record>
+
+        <!-- Distribution Integration Menu -->
+        <menuitem id="menu_distribution_integration" name="Distribution Integration" parent="report_designer.menu_report_designer" sequence="20" action="action_distribution_integration"/>
+    </data>
+</odoo>
+```

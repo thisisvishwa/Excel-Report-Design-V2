@@ -1,0 +1,49 @@
+```xml
+<odoo>
+    <data>
+        <!-- Report Parameters Form View -->
+        <record id="view_report_parameters_form" model="ir.ui.view">
+            <field name="name">report.parameters.form</field>
+            <field name="model">report.parameters</field>
+            <field name="arch" type="xml">
+                <form string="Report Parameters">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="parameter_type"/>
+                            <field name="default_value"/>
+                            <field name="validation_rule"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Report Parameters Tree View -->
+        <record id="view_report_parameters_tree" model="ir.ui.view">
+            <field name="name">report.parameters.tree</field>
+            <field name="model">report.parameters</field>
+            <field name="arch" type="xml">
+                <tree string="Report Parameters">
+                    <field name="name"/>
+                    <field name="parameter_type"/>
+                    <field name="default_value"/>
+                    <field name="validation_rule"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Report Parameters Action -->
+        <record id="action_report_parameters" model="ir.actions.act_window">
+            <field name="name">Report Parameters</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">report.parameters</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_report_parameters_tree"/>
+        </record>
+
+        <!-- Report Parameters Menu -->
+        <menuitem id="menu_report_parameters" name="Report Parameters" parent="report_designer.menu_report_designer" sequence="10" action="action_report_parameters"/>
+    </data>
+</odoo>
+```

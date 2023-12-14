@@ -1,0 +1,61 @@
+/* report_designer.css */
+
+.oe_report_designer {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.oe_report_designer .oe_form_field {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.oe_report_designer .oe_listview_row {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #eee;
+}
+
+.oe_report_designer .oe_listview_row:hover {
+    background-color: #e6f7ff;
+}
+
+.oe_report_designer .oe_button {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 3px;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+.oe_report_designer .oe_button:hover {
+    background-color: #0056b3;
+}
+
+.oe_report_designer .oe_section_title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.oe_report_designer .oe_section_header,
+.oe_report_designer .oe_section_footer {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.oe_report_designer .oe_error_message {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.oe_report_designer .oe_success_message {
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    padding: 10px;
+    border-radius: 3px;
+}

@@ -1,0 +1,57 @@
+```xml
+<odoo>
+    <data>
+        <!-- Configuration Management Form View -->
+        <record id="view_configuration_management_form" model="ir.ui.view">
+            <field name="name">configuration.management.form</field>
+            <field name="model">configuration.management</field>
+            <field name="arch" type="xml">
+                <form string="Configuration Management">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                        <notebook>
+                            <page string="Configuration Duplication">
+                                <field name="duplicate_config"/>
+                            </page>
+                            <page string="Template Management">
+                                <field name="template_management"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Configuration Management Tree View -->
+        <record id="view_configuration_management_tree" model="ir.ui.view">
+            <field name="name">configuration.management.tree</field>
+            <field name="model">configuration.management</field>
+            <field name="arch" type="xml">
+                <tree string="Configuration Management">
+                    <field name="name"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Configuration Management Action -->
+        <record id="action_configuration_management" model="ir.actions.act_window">
+            <field name="name">Configuration Management</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">configuration.management</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to start defining your Configuration Management.
+                </p>
+            </field>
+        </record>
+
+        <!-- Configuration Management Menu -->
+        <menuitem id="menu_configuration_management" name="Configuration Management" parent="report_designer.menu_report_designer" sequence="30" action="action_configuration_management"/>
+    </data>
+</odoo>
+```
