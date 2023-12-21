@@ -1,0 +1,51 @@
+```xml
+<odoo>
+    <data>
+        <!-- Output Customization Form View -->
+        <record id="view_output_customization_form" model="ir.ui.view">
+            <field name="name">output.customization.form</field>
+            <field name="model">output.customization</field>
+            <field name="arch" type="xml">
+                <form string="Output Customization">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="file_naming_convention"/>
+                            <field name="wizard_description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Output Customization Tree View -->
+        <record id="view_output_customization_tree" model="ir.ui.view">
+            <field name="name">output.customization.tree</field>
+            <field name="model">output.customization</field>
+            <field name="arch" type="xml">
+                <tree string="Output Customization">
+                    <field name="name"/>
+                    <field name="file_naming_convention"/>
+                    <field name="wizard_description"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Output Customization Action -->
+        <record id="action_output_customization" model="ir.actions.act_window">
+            <field name="name">Output Customization</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">output.customization</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to start defining your output customization.
+                </p>
+            </field>
+        </record>
+
+        <!-- Output Customization Menu -->
+        <menuitem id="menu_output_customization" name="Output Customization" parent="report_designer.menu_report_designer" sequence="6" action="action_output_customization"/>
+    </data>
+</odoo>
+```

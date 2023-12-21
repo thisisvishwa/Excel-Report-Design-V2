@@ -1,0 +1,75 @@
+```xml
+<odoo>
+    <data>
+        <!-- Report Designer Form View -->
+        <record id="view_report_designer_form" model="ir.ui.view">
+            <field name="name">report.designer.form</field>
+            <field name="model">report.designer</field>
+            <field name="arch" type="xml">
+                <form string="Report Designer">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                        <notebook>
+                            <page string="Data Source">
+                                <field name="data_source_id" context="{'default_model': model}"/>
+                            </page>
+                            <page string="Report Structure">
+                                <field name="report_structure_id"/>
+                            </page>
+                            <page string="Excel Field">
+                                <field name="excel_field_id"/>
+                            </page>
+                            <page string="Report Parameters">
+                                <field name="report_parameters_id"/>
+                            </page>
+                            <page string="Advanced Features">
+                                <field name="advanced_features_id"/>
+                            </page>
+                            <page string="Output Customization">
+                                <field name="output_customization_id"/>
+                            </page>
+                            <page string="Distribution and Integration">
+                                <field name="distribution_integration_id"/>
+                            </page>
+                            <page string="Configuration Management">
+                                <field name="configuration_management_id"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Report Designer Tree View -->
+        <record id="view_report_designer_tree" model="ir.ui.view">
+            <field name="name">report.designer.tree</field>
+            <field name="model">report.designer</field>
+            <field name="arch" type="xml">
+                <tree string="Report Designer">
+                    <field name="name"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Report Designer Action -->
+        <record id="action_report_designer" model="ir.actions.act_window">
+            <field name="name">Report Designer</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">report.designer</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to start designing your report.
+                </p>
+            </field>
+        </record>
+
+        <!-- Report Designer Menu -->
+        <menuitem id="menu_report_designer" name="Report Designer" action="action_report_designer"/>
+    </data>
+</odoo>
+```

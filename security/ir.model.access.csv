@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_report_designer,access_report_designer,model_report_designer,base.group_user,1,1,1,1
+access_data_source,access_data_source,model_data_source,base.group_user,1,1,1,1
+access_report_structure,access_report_structure,model_report_structure,base.group_user,1,1,1,1
+access_excel_field,access_excel_field,model_excel_field,base.group_user,1,1,1,1
+access_report_parameters,access_report_parameters,model_report_parameters,base.group_user,1,1,1,1
+access_advanced_features,access_advanced_features,model_advanced_features,base.group_user,1,1,1,1
+access_output_customization,access_output_customization,model_output_customization,base.group_user,1,1,1,1
+access_distribution_integration,access_distribution_integration,model_distribution_integration,base.group_user,1,1,1,1
+access_configuration_management,access_configuration_management,model_configuration_management,base.group_user,1,1,1,1

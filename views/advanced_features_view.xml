@@ -1,0 +1,51 @@
+```xml
+<odoo>
+    <data>
+        <!-- Advanced Features Form View -->
+        <record id="view_advanced_features_form" model="ir.ui.view">
+            <field name="name">advanced.features.form</field>
+            <field name="model">advanced.features</field>
+            <field name="arch" type="xml">
+                <form string="Advanced Features">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="domain_filters"/>
+                            <field name="archived_data_inclusion"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Advanced Features Tree View -->
+        <record id="view_advanced_features_tree" model="ir.ui.view">
+            <field name="name">advanced.features.tree</field>
+            <field name="model">advanced.features</field>
+            <field name="arch" type="xml">
+                <tree string="Advanced Features">
+                    <field name="name"/>
+                    <field name="domain_filters"/>
+                    <field name="archived_data_inclusion"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Advanced Features Action -->
+        <record id="action_advanced_features" model="ir.actions.act_window">
+            <field name="name">Advanced Features</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">advanced.features</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to add a new Advanced Feature.
+                </p>
+            </field>
+        </record>
+
+        <!-- Advanced Features Menu -->
+        <menuitem id="menu_advanced_features" name="Advanced Features" parent="report_designer.menu_report_designer" sequence="5" action="action_advanced_features"/>
+    </data>
+</odoo>
+```

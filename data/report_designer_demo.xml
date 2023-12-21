@@ -1,0 +1,70 @@
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Report Designer Demo Data -->
+        <record id="report_designer_demo_1" model="report.designer">
+            <field name="name">Demo Report 1</field>
+            <field name="description">This is a demo report for testing.</field>
+        </record>
+
+        <!-- Data Source Demo Data -->
+        <record id="data_source_demo_1" model="data.source">
+            <field name="name">Demo Data Source 1</field>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="report_id" ref="report_designer_demo_1"/>
+        </record>
+
+        <!-- Report Structure Demo Data -->
+        <record id="report_structure_demo_1" model="report.structure">
+            <field name="name">Demo Report Structure 1</field>
+            <field name="section_title">Section 1</field>
+            <field name="report_id" ref="report_designer_demo_1"/>
+        </record>
+
+        <!-- Excel Field Demo Data -->
+        <record id="excel_field_demo_1" model="excel.field">
+            <field name="name">Demo Excel Field 1</field>
+            <field name="field_id" ref="base.field_res_partner__name"/>
+            <field name="structure_id" ref="report_structure_demo_1"/>
+        </record>
+
+        <!-- Report Parameters Demo Data -->
+        <record id="report_parameters_demo_1" model="report.parameters">
+            <field name="name">Demo Report Parameter 1</field>
+            <field name="parameter_type">char</field>
+            <field name="default_value">Default</field>
+            <field name="report_id" ref="report_designer_demo_1"/>
+        </record>
+
+        <!-- Advanced Features Demo Data -->
+        <record id="advanced_features_demo_1" model="advanced.features">
+            <field name="name">Demo Advanced Feature 1</field>
+            <field name="domain_filter">[('customer', '=', True)]</field>
+            <field name="include_archived">False</field>
+            <field name="report_id" ref="report_designer_demo_1"/>
+        </record>
+
+        <!-- Output Customization Demo Data -->
+        <record id="output_customization_demo_1" model="output.customization">
+            <field name="name">Demo Output Customization 1</field>
+            <field name="file_naming">demo_report_1.xlsx</field>
+            <field name="wizard_description">Generate Demo Report 1</field>
+            <field name="report_id" ref="report_designer_demo_1"/>
+        </record>
+
+        <!-- Distribution Integration Demo Data -->
+        <record id="distribution_integration_demo_1" model="distribution.integration">
+            <field name="name">Demo Distribution Integration 1</field>
+            <field name="email_to">demo@example.com</field>
+            <field name="report_id" ref="report_designer_demo_1"/>
+        </record>
+
+        <!-- Configuration Management Demo Data -->
+        <record id="configuration_management_demo_1" model="configuration.management">
+            <field name="name">Demo Configuration Management 1</field>
+            <field name="template_id" ref="report_designer_demo_1"/>
+        </record>
+    </data>
+</odoo>
+```

@@ -1,0 +1,55 @@
+```xml
+<odoo>
+    <data>
+        <!-- Data Source Form View -->
+        <record id="view_data_source_form" model="ir.ui.view">
+            <field name="name">data.source.form</field>
+            <field name="model">data.source</field>
+            <field name="arch" type="xml">
+                <form string="Data Source">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                        <group>
+                            <field name="model_access"/>
+                            <field name="field_accessibility"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Data Source Tree View -->
+        <record id="view_data_source_tree" model="ir.ui.view">
+            <field name="name">data.source.tree</field>
+            <field name="model">data.source</field>
+            <field name="arch" type="xml">
+                <tree string="Data Source">
+                    <field name="name"/>
+                    <field name="description"/>
+                    <field name="model_access"/>
+                    <field name="field_accessibility"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Data Source Action -->
+        <record id="action_data_source" model="ir.actions.act_window">
+            <field name="name">Data Source</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">data.source</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to create a new Data Source.
+                </p>
+            </field>
+        </record>
+
+        <!-- Data Source Menu -->
+        <menuitem id="menu_data_source" name="Data Source" parent="report_designer.menu_report_designer" sequence="10" action="action_data_source"/>
+    </data>
+</odoo>
+```
